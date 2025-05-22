@@ -1,0 +1,180 @@
+/* Poppins fonts with weights & italics
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../Assets/Fonts/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../Assets/Fonts/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../Assets/Fonts/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../Assets/Fonts/Vazir-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+ */
+body {
+    font-family: 'Poppins', 'Vazir', sans-serif;
+}

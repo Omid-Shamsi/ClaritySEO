@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SEO Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/fonts.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Assets/Font Awesome/css/all.css">
+</head>
+
+<body>
+    <div class="extension-wrapper py-4 container-fluid">
+        <header class="mb-4">
+            <ul class="nav nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="fa-duotone fa-solid fa-house"></i>
+                        Overview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-duotone fa-solid fa-heading"></i>
+                        Content
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-duotone fa-solid fa-link"></i>
+                        Links
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-duotone fa-solid fa-images"></i>
+                        Images
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-duotone fa-solid fa-rocket-launch"></i>
+                        PageSpeed
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div class="overview-tab">
+                <section class="p-4 mb-2">
+                    <h2>General Key Meta Datas</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item metadata-item">
+                            <div class="d-flex mb-2 justify-content-between align-items-center">
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-duotone fa-solid fa-pen-to-square list-icon"></i>
+                                    <h3 class="ml-2">Title</h3>
+                                </span>
+                                <span class="badge badge-pill badge-success">Success</span>
+                            </div>
+                            <p id="meta-title">
+                                Loading...
+                            </p>
+                        </li>
+                        <li class="list-group-item metadata-item">
+                            <div class="d-flex mb-2 justify-content-between align-items-center">
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-duotone fa-solid fa-subtitles list-icon"></i>
+                                    <h3 class="ml-2">Description</h3>
+                                </span>
+                                <span class="badge badge-pill badge-success">Success</span>
+                            </div>
+                            <p id="meta-description">
+                                Loading...
+                            </p>
+                        </li>
+                        <li class="list-group-item metadata-item">
+                            <div class="d-flex mb-2 justify-content-between align-items-center">
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-duotone fa-solid fa-link-simple list-icon"></i>
+                                    <h3 class="ml-2">URL</h3>
+                                </span>
+                                <span class="badge badge-pill badge-success">Success</span>
+                            </div>
+                            <p id="url">
+                                Loading...
+                            </p>
+                        </li>
+                        <li class="list-group-item metadata-item">
+                            <div class="d-flex mb-2 justify-content-between align-items-center">
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-duotone fa-solid fa-link-simple list-icon"></i>
+                                    <h3 class="ml-2">Canonical</h3>
+                                </span>
+                                <span class="badge badge-pill badge-success">Success</span>
+                            </div>
+                            <p id="canonical">
+                                Loading...
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="content-tab">
+                <section class="p-4 mb-4">
+                    <h6 class="mb-3">Heading Structure</h6>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H1</span>
+                            <span class="badge bg-secondary" id="h1-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H2</span>
+                            <span class="badge bg-secondary" id="h2-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H3</span>
+                            <span class="badge bg-secondary" id="h3-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H4</span>
+                            <span class="badge bg-secondary" id="h4-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H5</span>
+                            <span class="badge bg-secondary" id="h5-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H6</span>
+                            <span class="badge bg-secondary" id="h6-count">Loading...</span>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <h6 class="mb-2">Heading Order</h6>
+                        <div id="heading-order" class="small text-muted">
+                            Loading...
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div class="links-tab">
+
+            </div>
+            <div class="images-tab">
+
+            </div>
+            <div class="pagespeed-tab">
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="copy-right text-center p-2">
+
+                <p>Made with ❤️</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="Scripts/script.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Assets/Font Awesome/js/all.js"></script>
+</body>
+
+</html>
