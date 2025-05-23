@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "SEO Checker",
+    "name": "ClaritySEO",
     "version": "1.0",
     "description": "A simple SEO checker Chrome extension.",
     "permissions": [
