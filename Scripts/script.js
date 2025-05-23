@@ -24,23 +24,64 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     document.getElementById("url").textContent = message.payload.url;
     document.getElementById("canonical").textContent = message.payload.canonical;
 
+    // Fixing Badges
+    document.getElementById("meta-title-badge").textContent = `${message.payload.title.length} Characters`;
+    document.getElementById("meta-title-badge").classList.remove('badge-secondary');
+    if (message.payload.title.length >= 50 && message.payload.title.length <= 60) {
+      document.getElementById("meta-title-badge").classList.add('badge-success');
+    } else {
+      document.getElementById("meta-title-badge").classList.add('badge-danger');
+    }
+
+
+    document.getElementById("meta-description-badge").textContent = `${message.payload.description.length} Characters`;
+    document.getElementById("meta-description-badge").classList.remove('badge-secondary');
+    if (message.payload.description.length >= 155 && message.payload.description.length <= 160) {
+      document.getElementById("meta-description-badge").classList.add('badge-success');
+    } else {
+      document.getElementById("meta-description-badge").classList.add('badge-danger');
+    }
+
+
+    const urlPath = new URL(message.payload.url).pathname.split('/').filter(Boolean);
+    document.getElementById("url-badge-folders").textContent = `${urlPath.length} Folders`;
+    document.getElementById("url-badge-folders").classList.remove('badge-secondary');
+    if (urlPath.length <= 4) {
+      document.getElementById("url-badge-folders").classList.add('badge-success');
+    } else {
+      document.getElementById("url-badge-folders").classList.add('badge-danger');
+    }
+
+    document.getElementById("url-badge").textContent = `${message.payload.url.length} Characters`;
+    document.getElementById("url-badge").classList.remove('badge-secondary');
+    if (message.payload.url.length <= 60) {
+      document.getElementById("url-badge").classList.add('badge-success');
+    } else {
+      document.getElementById("url-badge").classList.add('badge-warning');
+    }
+
+    // Empty Meta Data Handling
     if (message.payload.canonical === "No canonical URL available!") {
       document.getElementById("canonical").classList.add('missing-meta-data');
+      document.getElementById("canonical-badge").classList.add('invisible');
     } else {
       document.getElementById("canonical").classList.remove('missing-meta-data');
     }
-
-    if (message.paylaod.title === "No title available!") {
+    
+    if (message.payload.title === "No title available!") {
       document.getElementById("meta-title").classList.add('missing-meta-data');
+      document.getElementById("meta-title-badge").classList.add('invisible');
     } else {
       document.getElementById("meta-title").classList.remove('missing-meta-data');
+      document.getElementById("meta-title-badge").classList.remove('invisible');
     }
-
-    if (message.paylaod.description === "No description available!") {
+    
+    if (message.payload.description === "No description available!") {
       document.getElementById("meta-description").classList.add('missing-meta-data');
+      document.getElementById("meta-description-badge").classList.add('invisible');
     } else {
       document.getElementById("meta-description").classList.remove('missing-meta-data');
+      document.getElementById("meta-description-badge").classList.remove('invisible');
     }
-
   }
 });
