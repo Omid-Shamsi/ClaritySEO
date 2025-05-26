@@ -15,34 +15,34 @@
 
 <body>
     <div class="extension-wrapper py-4 container-fluid">
-        <header class="mb-4">
+<header class="mb-4">
             <ul class="nav nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="#" data-target="overview-tab">
                         <i class="fa-duotone fa-solid fa-house"></i>
                         Overview
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-target="content-tab">
                         <i class="fa-duotone fa-solid fa-heading"></i>
                         Content
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-target="links-tab">
                         <i class="fa-duotone fa-solid fa-link"></i>
                         Links
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-target="images-tab">
                         <i class="fa-duotone fa-solid fa-images"></i>
                         Images
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-target="pagespeed-tab">
                         <i class="fa-duotone fa-solid fa-rocket-launch"></i>
                         PageSpeed
                     </a>
@@ -50,7 +50,7 @@
             </ul>
         </header>
         <main>
-            <div class="overview-tab">
+            <div class="tab-content" id="overview-tab">
                 <section class="p-4 mb-2">
                     <h2>General Key Meta Datas</h2>
                     <ul class="list-group list-group-flush">
@@ -58,7 +58,7 @@
                             <div class="d-flex mb-2 justify-content-between align-items-center">
                                 <span class="d-flex align-items-center">
                                     <i class="fa-duotone fa-solid fa-pen-to-square list-icon"></i>
-                                    <h3 class="ml-2">Title</h3>
+                                    <h3>Title</h3>
                                 </span>
                                 <div>
                                 <span class="badge badge-pill badge-secondary" id="meta-title-badge">Loading...</span>
@@ -72,7 +72,7 @@
                             <div class="d-flex mb-2 justify-content-between align-items-center">
                                 <span class="d-flex align-items-center">
                                     <i class="fa-duotone fa-solid fa-subtitles list-icon"></i>
-                                    <h3 class="ml-2">Description</h3>
+                                    <h3>Description</h3>
                                 </span>
                                 <div>           
                                     <span class="badge badge-pill badge-secondary" id="meta-description-badge">Loading...</span>
@@ -86,11 +86,12 @@
                             <div class="d-flex mb-2 justify-content-between align-items-center">
                                 <span class="d-flex align-items-center">
                                     <i class="fa-duotone fa-solid fa-link-simple list-icon"></i>
-                                    <h3 class="ml-2">URL</h3>
+                                    <h3>URL</h3>
                                 </span>
                                 <div>
                                     <span class="badge badge-pill badge-secondary" id="url-badge">Loading...</span>
                                     <span class="badge badge-pill badge-secondary" id="url-badge-folders">Loading...</span>
+                                    <span class="badge badge-pill badge-secondary" id="url-indexable">Loading...</span>
                                 </div>
                             </div>
                             <p id="url">
@@ -101,7 +102,7 @@
                             <div class="d-flex mb-2 justify-content-between align-items-center">
                                 <span class="d-flex align-items-center">
                                     <i class="fa-duotone fa-solid fa-link-simple list-icon"></i>
-                                    <h3 class="ml-2">Canonical</h3>
+                                    <h3>Canonical</h3>
                                 </span>
                                 <span class="badge badge-pill badge-secondary" id="canonical-badge">Loading...</span>
                             </div>
@@ -112,10 +113,13 @@
                     </ul>
                 </section>
             </div>
-            <div class="content-tab">
+            <div class="tab-content" id="content-tab">
                 <section class="p-4 mb-4">
-                    <h6 class="mb-3">Heading Structure</h6>
-                    <ul class="list-group mb-3">
+                    <h2>Heading Structure</h2>
+                        <div class="headings-structure" id="headings-structure">
+                            Loading...
+                        </div>
+                    <!-- <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item d-flex justify-content-between">
                             <span>H1</span>
                             <span class="badge bg-secondary" id="h1-count">Loading...</span>
@@ -140,32 +144,52 @@
                             <span>H6</span>
                             <span class="badge bg-secondary" id="h6-count">Loading...</span>
                         </li>
-                    </ul>
-
-                    <div>
-                        <h6 class="mb-2">Heading Order</h6>
-                        <div id="heading-order" class="small text-muted">
-                            Loading...
-                        </div>
-                    </div>
+                    </ul> -->
                 </section>
 
             </div>
-            <div class="links-tab">
+            <div class="tab-content" id="links-tab">
+                <section class="p-4 mb-4">
+                    <h2>Links Data</h2>
+                        mow
+                    <!-- <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H1</span>
+                            <span class="badge bg-secondary" id="h1-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H2</span>
+                            <span class="badge bg-secondary" id="h2-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H3</span>
+                            <span class="badge bg-secondary" id="h3-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H4</span>
+                            <span class="badge bg-secondary" id="h4-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H5</span>
+                            <span class="badge bg-secondary" id="h5-count">Loading...</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>H6</span>
+                            <span class="badge bg-secondary" id="h6-count">Loading...</span>
+                        </li>
+                    </ul> -->
+                </section>
+            </div>
+            <div class="tab-content" id="images-tab">
 
             </div>
-            <div class="images-tab">
-
-            </div>
-            <div class="pagespeed-tab">
-
+            <div class="tab-content" id="pagespeed-tab">
 
             </div>
         </main>
 
         <footer>
             <div class="copy-right text-center p-2">
-
                 <p>Made with ❤️</p>
             </div>
         </footer>
