@@ -96,6 +96,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       document.getElementById("url-indexable").textContent = "Indexable";
     } else {
       document.getElementById("url-indexable").classList.add('badge-danger');
+      document.getElementById("url-indexable").textContent = "Not Indexable";
     }
 
     document.getElementById("canonical-badge").classList.remove('badge-secondary');
@@ -170,6 +171,121 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         container.appendChild(wrapper);
       });
     }
+
+
+    // Content Overview
+    if (message.payload.keywords === "No keyword available!") {
+      document.getElementById("keywords").classList.add('missing-meta-data');
+      document.getElementById("keywords").textContent = "No keyword available!";
+    } else {
+      document.getElementById("keywords").textContent = message.payload.keywords;
+    }
+
+
+    if (message.payload.wordCount === 0) {
+      document.getElementById("wordcount").classList.add('missing-meta-data');
+      document.getElementById("wordcount").textContent = "No Content available!";
+    } else {
+      document.getElementById("wordcount").textContent = message.payload.wordCount;
+    }
+    
+    
+    if (message.payload.author === "No author available!") {
+      document.getElementById("author").classList.add('missing-meta-data');
+      document.getElementById("author").textContent = "No author available!";
+    } else {
+      document.getElementById("author").textContent = message.payload.author;
+    }
+
+    
+    // Document Language
+    if (message.payload.lang === "No lang available!") {
+      document.getElementById("lang").classList.add('missing-meta-data');
+    } else {
+      document.getElementById("lang").classList.remove('missing-meta-data');
+      document.getElementById("lang").textContent = message.payload.lang;
+    }
+
+
+    document.getElementById("total-links").textContent    = message.payload.totalLinks;
+    document.getElementById("unique-links").textContent   = message.payload.uniqueLinks;
+    document.getElementById("internal-links").textContent = message.payload.internalLinks;
+    document.getElementById("external-links").textContent = message.payload.externalLinks;
+
+  
+
+    // inside your chrome.runtime.onMessage listener, after setting link‐count badges…
+
+    // 1) Grab & reset the section
+    const linksSection = document.getElementById('links-list-section');
+    linksSection.innerHTML = '<h2>Links</h2>';
+
+    // 2) Destructure the two arrays
+    const { internalLinksList, externalLinksList } = message.payload;
+
+    // 3) If both are empty, show fallback
+    if (
+      (!Array.isArray(internalLinksList) || internalLinksList.length === 0) &&
+      (!Array.isArray(externalLinksList) || externalLinksList.length === 0)
+    ) {
+      const p = document.createElement('p');
+      p.classList.add('text-muted', 'mt-2');
+      p.textContent = 'No links available.';
+      linksSection.appendChild(p);
+    } else {
+      // 4a) Internal Links
+      if (internalLinksList.length) {
+        const h3 = document.createElement('h3');
+        h3.textContent = 'Internal Links';
+        h3.classList.add('mt-3');
+        linksSection.appendChild(h3);
+
+        const ulInt = document.createElement('ul');
+        ulInt.classList.add('list-unstyled');
+        internalLinksList.forEach(({ href, anchor }) => {
+          const li = document.createElement('li');
+          // Plain‐text render: URL — anchor text
+          li.textContent = `${href}  —  ${anchor}`;
+          ulInt.appendChild(li);
+        });
+        linksSection.appendChild(ulInt);
+      }
+
+      // 4b) External Links
+      if (externalLinksList.length) {
+        const h3 = document.createElement('h3');
+        h3.textContent = 'External Links';
+        h3.classList.add('mt-3');
+        linksSection.appendChild(h3);
+
+        const ulExt = document.createElement('ul');
+        ulExt.classList.add('list-unstyled');
+        externalLinksList.forEach(({ href, anchor }) => {
+          const li = document.createElement('li');
+          // Plain‐text render: URL — anchor text
+          li.textContent = `${href}  —  ${anchor}`;
+          ulExt.appendChild(li);
+        });
+        linksSection.appendChild(ulExt);
+      }
+    }
+    // After you've set up everything else in the META_DATA block...
+
+// Wire up the PageSpeed button:
+const psiBtn = document.getElementById('pagespeed-button');
+if (psiBtn) {
+  // First clear any old handlers
+  psiBtn.replaceWith(psiBtn.cloneNode(true));
+}
+const freshPsiBtn = document.getElementById('pagespeed-button');
+
+freshPsiBtn.addEventListener('click', () => {
+  const currentUrl = message.payload.url;
+  const psiUrl = `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(currentUrl)}`;
+  // Opens in a new tab
+  chrome.tabs.create({ url: psiUrl });
+});
+
 
   }
 });
